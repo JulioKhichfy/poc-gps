@@ -7,21 +7,22 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-// geolocation and native-geocoder
-import { Geolocation } from '@ionic-native/geolocation/ngx';
-import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { BackgroundGeolocation } from '@ionic-native/background-geolocation/ngx';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
-    Geolocation,
-    NativeGeocoder,
     { 
       provide: RouteReuseStrategy, 
       useClass: IonicRouteStrategy 
-    }
+    },
+    StatusBar,
+    SplashScreen,
+    BackgroundGeolocation
   ],
   bootstrap: [AppComponent],
 })

@@ -43,3 +43,18 @@
 
 caso não encontre seu device listado, execute:
 - ADB usb
+
+
+npm uninstall @ionic-native/geolocation  
+npm uninstall @ionic-native/native-geocoder
+npm uninstall cordova-plugin-geolocation  
+npm uninstall cordova-plugin-nativegeocoder
+
+ionic cordova plugin add @mauron85/cordova-plugin-background-geolocation
+npm install @ionic-native/background-geolocation
+
+ionic cordova plugin add cordova-plugin-splashscreen
+npm install @ionic-native/splash-screen
+
+ionic cordova plugin add cordova-plugin-statusbar
+npm install @ionic-native/status-bar
